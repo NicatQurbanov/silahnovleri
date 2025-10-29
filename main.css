@@ -1,0 +1,36 @@
+/* main */
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Orbitron, sans-serif;
+}
+
+body {
+    background-color: #e6ede4;
+}
+
+/* nav-bar */
+
+.logo {
+    background: url(./Images/images.jfif);
+    opacity: 0.95;
+    padding: 25px;
+    text-align: center;
+    color: white;
+    font-size: 3em;
+}
+
+#gun-list li {
+    color: #4b6343;
+}
+
+/* description section */
+
+.description-container {
+    display: flex;
+}
+
+/* table */
+
+
