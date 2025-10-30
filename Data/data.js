@@ -9,7 +9,7 @@ export const gunArr = [
       hasModifications: true,
       modifications: [''],
       price: 500,
-      src: '',
+      src: './Images/AK-74.jpg',
       text: "is an assault rifle designed by small arms designer Mikhail Kalashnikov in 1974 as a successor to the AKM. While primarily associated with the Soviet Union, it has been used by many countries since the 1970s. It is chambered for the 5.45×39mm cartridge, which replaced the 7.62×39mm cartridge of Kalashnikov's earlier automatic weapons for the Soviet Armed Forces.",
     },
     {
@@ -22,7 +22,7 @@ export const gunArr = [
       hasModifications: false,
       modifications: [''],
       price: 1000,
-      src: '',
+      src: './Images/Rpg-7.jpg',
       text: "is a portable, reusable, unguided, shoulder-launched, anti-tank, grenade launcher. The RPG-7 and its predecessor, the RPG-2, were designed by the Soviet Union, and are manufactured by the Russian company Bazalt. The weapon has the GRAU index (Russian armed forces index) 6G3.",
     },
     {
@@ -35,7 +35,7 @@ export const gunArr = [
       hasModifications: true,
       modifications: [''],
       price: 800,
-      src: '',
+      src: './Images/SVD_Dragunov.jpg',
       text: ' is a semi-automatic designated marksman rifle/sniper rifle[3] chambered in the 7.62×54mmR cartridge, developed in the Soviet Union.The SVD was designed to serve in a squad support role to provide precise long-range engagement capabilities to ordinary troops following the Warsaw Pact adoption of the 7.62×39mm intermediate cartridge and assault rifles as standard infantry weapon systems.',
     },
     {
@@ -48,7 +48,7 @@ export const gunArr = [
       hasModifications: false,
       modifications: [''],
       price: 1500,
-      src: '',
+      src: './Images/AGS-17.jpg',
       text: 'The SVD was designed to serve in a squad support role to provide precise long-range engagement capabilities to ordinary troops following the Warsaw Pact adoption of the 7.62×39mm intermediate cartridge and assault rifles as standard infantry weapon systems.The AGS-17 is a heavy infantry support weapon designed to operate from a tripod or mounted on an installation or vehicle. The AGS-17 fires 30 mm grenades in either direct or indirect fire to provide suppressive and lethal fire support against soft-skinned or fortified targets.',
     }
 ]
