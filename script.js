@@ -1,16 +1,15 @@
-const gunArr = [
-    {
-      model: 'AK-74',
-      type: '',
-      caliber: '',
-      weight: '',
-      magazine: '',
-      price: '',
-      modifications: '',
-      src: ''
-    },
-     
-]
+import { gunArr } from './Data/data.js'
+let arrList = '';
+gunArr.forEach(gun => {
+  arrList += `
+    <li >
+    <button class="gun-items">
+    ${gun.model}
+    </button>
+    </li>`;
+})
+document.getElementById('gun-list').innerHTML = arrList;
 
 
-const gunList = document.getElementById('gun-list')
+
+
