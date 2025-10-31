@@ -3,6 +3,8 @@ const gunList = document.getElementById('gun-list')
 const gunImg = document.getElementById('img-container')
 const descBar = document.getElementById('description-bar')
 const charasteristics = document.getElementById('charasteristics')
+const buyBtn = document.getElementById('buy-btn')
+const balance = document.getElementById('balance-num')
 let arrList = '';
 gunArr.forEach(gun => {
   arrList += `
@@ -16,7 +18,7 @@ gunArr.forEach(gun => {
 document.addEventListener('click', function(e){
   gunArr.forEach(gun => {
     if (e.target.id === gun.model)  {
-      
+      buyBtn.classList.remove('inactive')
       gunImg.innerHTML = `<img class="gun-image" src="${gun.src}">`
       descBar.innerHTML  = `<p class="description-paragraph">The ${gun.model} ${gun.text}</p>`
       charasteristics.innerHTML =
