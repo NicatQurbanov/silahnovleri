@@ -5,6 +5,7 @@ const descBar = document.getElementById('description-bar')
 const charasteristics = document.getElementById('charasteristics')
 const buyBtn = document.getElementById('buy-btn')
 const balance = document.getElementById('balance-num')
+
 let arrList = '';
 gunArr.forEach(gun => {
   arrList += `
@@ -32,10 +33,17 @@ document.addEventListener('click', function(e){
           <li><p>Modifications:</p><span class="charasteristics-data">${gun.modifications}</span></li>
           <li><p>Price:</p><span class="charasteristics-data">${gun.price}$</span></p></li>`
       }
-  })
+      if (e.target.id === gun.price) {
+    let balanceNum = Number(balance.innerHTML)
+    let priceNum =  Number(gun.price)
+    if (balanceNum > priceNum) {
+      balance.innerHTML = balanceNum - priceNum
+    }
+  }
+    })
+  
 })
-
-
+console.log(Number(balance.innerHTML) - Number(gunArr[0].price))
 gunList.innerHTML = arrList;
 
 
