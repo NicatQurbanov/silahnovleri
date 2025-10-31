@@ -16,7 +16,9 @@ gunArr.forEach(gun => {
     </li>
     `;
 })
-document.addEventListener('click', function(e){
+gunList.innerHTML = arrList;
+
+document.addEventListener('click', e => {
   gunArr.forEach(gun => {
     if (e.target.id === gun.model)  {
       buyBtn.classList.remove('inactive')
@@ -33,20 +35,24 @@ document.addEventListener('click', function(e){
           <li><p>Modifications:</p><span class="charasteristics-data">${gun.modifications}</span></li>
           <li><p>Price:</p><span class="charasteristics-data">${gun.price}$</span></p></li>`
       }
-      if (e.target.id === gun.price) {
+      if (e.target.id === buyBtn.id) {
     let balanceNum = Number(balance.innerHTML)
     let priceNum =  Number(gun.price)
     if (balanceNum > priceNum) {
-      balance.innerHTML = balanceNum - priceNum
+      const hh = balanceNum - priceNum
+      balance.innerHTML = hh.toString()
+      console.log(balance)
     }
   }
     })
   
 })
 console.log(Number(balance.innerHTML) - Number(gunArr[0].price))
-gunList.innerHTML = arrList;
 
-
+for (let i = 0; i < gunArr.length; i++) {
+  let text1 = ''
+  text1 += `<li><p>${gunArr[i].}</p><span class="charasteristics-data">${gunArr[i].}</span></li>`
+}
 
 
 
