@@ -186,11 +186,14 @@ h2 {
     padding-inline-start: 0;
 }
 
-.charasteristics li {
-    margin-top: 15px;
+.list {
     font-weight: bold;
     font-size: 1.15em;
     color: #2a3027;
+}
+
+.margin-top {
+  margin-top: 23.3px;
 }
 
 .charasteristics p, .charasteristics-data {
