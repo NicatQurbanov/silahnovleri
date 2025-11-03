@@ -103,7 +103,7 @@ nav {
 /* description section */
 
 .description-section {
-    height: 1000px;
+    height: 1100px;
     width: 80%;
     margin: 70px auto 0;
 }
@@ -195,9 +195,12 @@ h2 {
     width: 50%;
 }
 
+
+
 .charasteristics-data {
-    text-align: right;
+    text-align: right;  /* keep text aligned to the right */
     font-weight: normal;
+    margin-left: auto;  /* push the data to the right */
 }
 
 /* footer */

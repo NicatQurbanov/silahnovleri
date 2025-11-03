@@ -33,7 +33,7 @@ document.addEventListener('click', e => {
         if (key === "text"|| key === "src"|| key === "hasModifications") {
             return
         }
-        charasteristicsText += `<li class="list"><p>${key}:</p><span class="charasteristics-data">${gun[key]}</span></p></li>`
+        charasteristicsText += `<li class="margin-top list "><p>${key}:</p><span class="charasteristics-data">${gun[key]}</span></li>`
       })
         charasteristics.innerHTML = `<h2>Product description</h2> ${charasteristicsText}`;
       }
