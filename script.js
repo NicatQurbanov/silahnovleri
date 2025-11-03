@@ -18,36 +18,35 @@ gunArr.forEach(gun => {
 })
 
 gunList.innerHTML = arrList;
+let selectedGun = null;
 
 document.addEventListener('click', e => {
   gunArr.forEach(gun => {
     let keyArr = Object.keys(gun)
     if (e.target.id === gun.model)  {
+      selectedGun = gun;
       buyBtn.classList.remove('inactive')
       gunImg.innerHTML = `<img class="gun-image" src="${gun.src}">`
       descBar.innerHTML  = `<p class="description-paragraph">The ${gun.model} ${gun.text}</p>`
       let charasteristicsText = '';
       keyArr.forEach( key => {
         if (key === "text"|| key === "src"|| key === "hasModifications") {
-             return
+            return
         }
         charasteristicsText += `<li class="list"><p>${key}:</p><span class="charasteristics-data">${gun[key]}</span></p></li>`
       })
         charasteristics.innerHTML = `<h2>Product description</h2> ${charasteristicsText}`;
       }
     })
-    // Secilmis mehsulun "Buy" button uzerine basanda hemis mehsulun qiymeti user-in balansindan cixmalidi
-    if (e.target.id === buyBtn.id) {
-    let balanceNum = Number(balance.innerHTML)
-    console.log(e)
-    let priceNum =  Number(gunArr[0].price) 
-    // gunArr[0] evezine current secilmis mehsulu Number() icine nece yaza bilerem?????
-    if (balanceNum > priceNum) {
-      const hh = balanceNum - priceNum
-      balance.innerHTML = hh.toString()
-      console.log(balance)}}
+    if (e.target.id === buyBtn.id && selectedGun) {
+      const balanceNum = Number(balance.innerHTML)
+      const priceNum = Number(selectedGun.price)
+      if (balanceNum >= priceNum) {
+        const newBalance = balanceNum - priceNum;
+        balance.innerHTML = newBalance;
+      } 
+    }
 })
-
 
 
 
